@@ -1,0 +1,13 @@
+# Ignorer les modules node.js
+/frontend/node_modules/
+
+# Ignorer les fichiers d'environnement sensibles
+.env
+
+# Ignorer les fichiers uploads (images produits, etc.)
+/backend/uploads/
+
+# Ignorer les fichiers de log et systèmes
+*.log
+.DS_Store
+Thumbs.db

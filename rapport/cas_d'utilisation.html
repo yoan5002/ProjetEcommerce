@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Diagramme de Cas d'Utilisation - Analyse complète et structurelle" />
+    <meta name="author" content="Gangster Online Shop" />
+    <title>Diagramme de Cas d'Utilisation</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons -->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <!-- Core theme CSS -->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        .navbar {
+            background: linear-gradient(90deg, #6c63ff, #8e44ad);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: white;
+        }
+
+        .navbar .nav-link {
+            color: white;
+            font-weight: 500;
+        }
+
+        .masthead {
+            position: relative;
+            background: url('assets/img/RAP.webp') no-repeat center center;
+            background-size: cover;
+            text-align: center;
+            color: white;
+            padding: 150px 0;
+        }
+
+        .masthead .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .masthead h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .masthead .subheading {
+            font-size: 1.3rem;
+            color: #fdd835;
+        }
+
+        .content-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #6c63ff;
+        }
+
+        h3 {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .highlight {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 5px solid #6c63ff;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: #6c63ff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #4a47c3;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        footer .social-icons a:hover {
+            color: #6c63ff;
+        }
+
+        .diagram-image {
+            display: block;
+            margin: 30px auto;
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="#"> Shop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="./index.html">Retour</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead">
+        <div class="overlay"></div>
+        <div class="container position-relative">
+            <h1>Diagramme de Cas d'Utilisation</h1>
+            <p class="subheading">Découvrez les interactions clés de notre système</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Analyse des Acteurs et Interactions</h2>
+            <p>
+                Un diagramme de cas d'utilisation met en lumière les fonctionnalités accessibles et les interactions entre les acteurs principaux d'un système. Dans notre application, nous avons deux acteurs : <strong>l'utilisateur</strong> et <strong>l'administrateur</strong>.
+            </p>
+
+            <h3>1. Acteur : Utilisateur</h3>
+            <p>Voici les principales actions qu'un utilisateur peut effectuer :</p>
+            <div class="highlight">
+                <ul>
+                    <li><strong>Consulter les produits :</strong> Découvrir les articles disponibles.</li>
+                    <li><strong>Ajouter au panier :</strong> Sélectionner des produits pour les acheter plus tard.</li>
+                    <li><strong>Effectuer des paiements :</strong> Finaliser une commande via un système sécurisé tel que PayPal.</li>
+                    <li><strong>Gérer son compte :</strong> S'inscrire, se connecter ou mettre à jour ses informations.</li>
+                </ul>
+            </div>
+        </div>
+
+            <h3>2. Acteur : Administrateur</h3>
+            <p>L'administrateur possède des droits avancés :</p>
+            <div class="highlight">
+                <ul>
+                    <li><strong>Gérer le catalogue :</strong> Ajouter, modifier ou retirer des produits.</li>
+                    <li><strong>Superviser les utilisateurs :</strong> Créer ou désactiver des comptes utilisateurs.</li>
+                    <li><strong>Analyser les ventes :</strong> Examiner les paiements effectués sur la plateforme.</li>
+                </ul>
+          </div>
+
+            <h3>Visualisation du Diagramme</h3>
+            <img src="assets/img/usecase.png" alt="Diagramme de Cas d'Utilisation" class="diagram-image" />
+            <p class="highlight">
+                Ce diagramme offre une vue globale de notre système, illustrant clairement comment chaque acteur interagit avec les fonctionnalités disponibles.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024  Shop. Tous droits réservés.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
